@@ -25,3 +25,7 @@ app.get('/find',async(req,resp)=>{
     resp.obj = ({"book":book, "member":member , "transaction":transaction})
 } )
 
+const port = 3000
+app.listen(port,(req,resp)=>{
+    console.log('server is running on port ')
+})

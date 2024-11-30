@@ -18,3 +18,10 @@ app.post ('/creat', async(req,resp)=>{
     resp.json({"Book": bookobj, "member":memberobj,"transaction": transactionobj})
 })
 
+app.get('/find',async(req,resp)=>{
+    const book = await books.find()
+    const member = await members.find()
+    const transaction = await Transaction.find()
+    resp.obj = ({"book":book, "member":member , "transaction":transaction})
+} )
+
